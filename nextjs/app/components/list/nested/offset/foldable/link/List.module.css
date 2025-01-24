@@ -1,0 +1,14 @@
+.component {
+  font-size: 0.8rem;
+  color: white;
+
+  display: grid;
+}
+
+.component.offset {
+  grid-template-columns: 16px 1fr;
+}
+
+.component.offset > * {
+  grid-column: 2/3;
+}

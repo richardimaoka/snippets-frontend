@@ -1,0 +1,21 @@
+.component {
+  /* Cancel the default <a> decoration */
+  text-decoration: none;
+  color: inherit;
+
+  background-color: white;
+  color: black;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-right: 16px;
+  /* padding-left is dynamically set inside JSX */
+
+  font-size: 1rem;
+
+  display: grid;
+}
+
+.component:hover {
+  background-color: #ececec;
+}
