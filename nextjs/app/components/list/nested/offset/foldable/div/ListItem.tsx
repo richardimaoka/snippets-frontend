@@ -4,7 +4,7 @@ import { List } from "./List";
 import styles from "./ListItem.module.css";
 
 type Props = {
-  item: ReactElement;
+  text: string;
   children?: ReactElement | ReactElement[];
 };
 
@@ -17,7 +17,7 @@ export function ListItem(props: Props) {
         className={styles.component}
         style={{ paddingLeft: `${16 * depth}px` }}
       >
-        {props.item}
+        {props.text}
       </div>
       {props.children && (
         <ListDepthContext.Provider value={depth + 1}>
