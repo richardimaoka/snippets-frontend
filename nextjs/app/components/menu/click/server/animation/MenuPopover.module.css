@@ -1,0 +1,44 @@
+.component {
+  /* cancel default popover settings */
+  border-style: none;
+
+  /* anchor position settings */
+  /* position: absolute; /* this is not necessary if you use popover in combo with anchor */
+  /* position-anchor: --anchor-*********; /* this should be supplied by the style attribute instead */
+  position-area: bottom span-right;
+  /* popover element has weird large margins  */
+  margin: 0;
+
+  transition: display 0.3s allow-discrete;
+  overflow-y: hidden;
+}
+
+.component {
+  animation: 0.3s forwards shrink;
+}
+
+.component:popover-open {
+  animation: 0.3s forwards expand;
+}
+
+@keyframes expand {
+  from {
+    height: 0;
+  }
+
+  to {
+    /* calc-size is necessary for height animation, otherwise, interpolate-size: allow-keywords*/
+    height: calc-size(max-content, size);
+  }
+}
+
+@keyframes shrink {
+  from {
+    /* calc-size is necessary for height animation, otherwise, interpolate-size: allow-keywords*/
+    height: calc-size(max-content, size);
+  }
+
+  to {
+    height: 0;
+  }
+}
