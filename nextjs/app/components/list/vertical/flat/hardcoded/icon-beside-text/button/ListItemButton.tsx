@@ -1,4 +1,3 @@
-import { ReactElement, useContext } from "react";
 import styles from "./ListItemButton.module.css";
 import { Icon } from "./Icon";
 
