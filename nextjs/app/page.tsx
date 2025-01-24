@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { Example } from "./components/list/flat/examples/Example";
+import { Example } from "./components/list/vertical/flat/examples/Example";
 
 export default function Page() {
   return (

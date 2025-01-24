@@ -1,4 +1,4 @@
-import { List } from "../../flat/hardcoded/button/List";
+import { List } from "../hardcoded/button/List";
 import { ListItemButton } from "../hardcoded/button/ListItemButton";
 import styles from "./Example.module.css";
 
