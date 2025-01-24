@@ -1,4 +1,4 @@
-import { Menu } from "../server/animation/Menu";
+import { Menu } from "../server/static/Menu";
 import styles from "./Example.module.css";
 
 type Props = {};
