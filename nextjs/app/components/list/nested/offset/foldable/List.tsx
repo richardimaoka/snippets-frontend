@@ -2,32 +2,39 @@ import { ReactNode } from "react";
 import styles from "./List.module.css";
 
 type ItemProps = {
-  name: string;
+  item: ReactNode;
   children?: ReactNode;
 };
-
-function InternalItem(props: ItemProps) {
-  return <div className={styles.item}>{props.name}</div>;
-}
 
 export function ListItem(props: ItemProps) {
   return (
     <div>
-      <InternalItem name={props.name} />
+      {props.item}
       {props.children && <List offset>{props.children}</List>}
     </div>
   );
 }
 
-type Props = {
+type ListInternalProps = {
+  // list of <ListItem>
   children: ReactNode;
-  offset?: boolean;
+  offsetLevel: number;
+};
+
+function ListInternal(props: ListInternalProps) {
+  return <div className={styles.list}>{props.children}</div>;
+}
+
+type Props = {
+  // list of <ListItem>
+  children: ReactNode;
+  offsetLevel?: number;
 };
 
 export function List(props: Props) {
-  return (
-    <div className={styles.list + (props.offset ? " " + styles.offset : "")}>
-      {props.children}
-    </div>
-  );
+  const offsets = Array(props.offsetLevel);
+
+  <div className={styles.list + (props.offset ? " " + styles.offset : "")}>
+    {props.children}
+  </div>;
 }
