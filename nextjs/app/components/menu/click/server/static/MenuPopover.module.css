@@ -8,4 +8,5 @@
   position-area: bottom span-right;
   /* popover element has weird large margins  */
   margin: 0;
+  padding: 0;
 }
