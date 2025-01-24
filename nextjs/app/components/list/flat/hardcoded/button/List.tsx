@@ -6,5 +6,5 @@ type Props = {
 };
 
 export function List(props: Props) {
-  return <div className={styles.list}>{props.children}</div>;
+  return <div className={styles.component}>{props.children}</div>;
 }
