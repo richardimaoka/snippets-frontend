@@ -1,0 +1,33 @@
+.component {
+  /* card part layout */
+  display: grid;
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  justify-items: start;
+  row-gap: 8px;
+
+  /* item size */
+  font-size: 1.2rem;
+
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 16px;
+  padding-right: 16px;
+
+  background-color: white;
+
+  box-sizing: border-box;
+}
+
+.image {
+  /* */
+  max-width: 100%;
+  /* retain aspect ratio */
+  height: auto;
+}
+
+.text {
+  color: black;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
