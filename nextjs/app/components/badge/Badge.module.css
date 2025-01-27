@@ -1,0 +1,22 @@
+.component {
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+
+  /* min-width/height to make single digit a perfect circle */
+  min-width: 20px;
+  height: 20px;
+  /* border-radius = min-width/height makes a pill-like shape for multi-digits */
+  border-radius: 20px;
+
+  /* grid centering for single digit to be centered */
+  display: grid;
+  align-content: center;
+  justify-content: center;
+
+  background-color: rgb(168, 168, 168);
+
+  font-weight: 700;
+  font-size: 0.8rem;
+}
