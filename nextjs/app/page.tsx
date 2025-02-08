@@ -1,4 +1,4 @@
-import { SearchBox } from "./components/search/SearchBox";
+import { SearchBox } from "./components/search/search-input-button/SearchBox";
 import styles from "./page.module.css";
 
 export default function Page() {
