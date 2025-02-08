@@ -9,4 +9,7 @@
 
 .component > * {
   width: 350px;
+
+  display: grid;
+  justify-items: center;
 }

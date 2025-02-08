@@ -1,10 +1,17 @@
-import { SearchBox } from "./components/search/form/search-input-button/SearchBox";
+import { Avatar } from "./components/avator/image/Avatar";
 import styles from "./page.module.css";
 
 export default function Page() {
   return (
     <div className={styles.component}>
-      <SearchBox />
+      <div>
+        <Avatar
+          imageUrl="/images/profile.jpg"
+          alt="Michelle"
+          width={100}
+          height={100}
+        />
+      </div>
     </div>
   );
 }
