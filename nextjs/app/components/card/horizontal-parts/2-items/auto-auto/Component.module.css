@@ -1,7 +1,8 @@
 .component {
   /* card part layout */
   display: grid;
-  grid-template-columns: auto 1fr;
+  /* width should be given by the parent (likey grid/flex) */
+  grid-template-columns: auto auto;
   align-items: center;
   column-gap: 8px;
 
