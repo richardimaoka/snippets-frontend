@@ -2,11 +2,13 @@ import { Fragment } from "react";
 import styles from "./Breadcrumbs.module.css";
 import Link from "next/link";
 
+type ChildProps = {
+  href: string;
+  text: string;
+};
+
 type Props = {
-  elements: {
-    href: string;
-    text: string;
-  }[];
+  elements: ChildProps[];
 };
 
 export function Breadcrumbs(props: Props) {
@@ -18,6 +20,7 @@ export function Breadcrumbs(props: Props) {
             {x.text}
           </Link>
           {i < props.elements.length - 1 && (
+            // if NOT last element
             <div className={styles.separator}>&gt;</div>
           )}
         </Fragment>
