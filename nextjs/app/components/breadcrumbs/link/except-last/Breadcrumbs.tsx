@@ -11,19 +11,22 @@ type Props = {
   elements: ChildProps[];
 };
 
+export type BreadcrumbChildProps = ChildProps;
+
 export function Breadcrumbs(props: Props) {
   return (
     <div className={styles.component}>
       {props.elements.map((x, i) =>
         i === props.elements.length - 1 ? (
-          // if last element
-          <div className={styles.element}>{x.text}</div>
+          <div key={x.text + x.href} className={styles.element}>
+            {x.text}
+          </div>
         ) : (
-          <Fragment key={i}>
+          <Fragment key={x.text + x.href}>
             <Link className={styles.element + " " + styles.link} href={x.href}>
               {x.text}
             </Link>
-            {<div className={styles.separator}>&gt;</div>}
+            <div className={styles.separator}>&gt;</div>
           </Fragment>
         )
       )}
